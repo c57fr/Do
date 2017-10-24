@@ -1,0 +1,19 @@
+<application>
+  <component name="DefaultFont">
+    <option name="FONT_SIZE" value="14" />
+    <option name="FONT_FAMILY" value="Source Code Pro Semibold" />
+    <option name="LINE_SPACING" value="1.1" />
+  </component>
+  <component name="EditorSettings">
+    <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
+    <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
+  </component>
+  <component name="LiveEditOptions" updatePolicy="AUTO" />
+  <component name="SqlEditorOptions">
+    <option name="concatenateStringsOnEnter" value="true" />
+    <option name="qualificationType" value="On collisions" />
+  </component>
+  <component name="XmlEditorOptions">
+    <option name="showCssInlineColorPreview" value="true" />
+  </component>
+</application>

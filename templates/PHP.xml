@@ -1,5 +1,7 @@
 <templateSet group="PHP">
-  <template name="eco" value="echo '$END$';" description="'echo' statement" toReformat="true" toShortenFQNames="true" />
+  <template name="eco" value="echo '$END$';" description="'echo' statement" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
   <template name="fun" value="function $END$ () {&#10;    &#10;}" description="Fonction" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
