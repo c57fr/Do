@@ -1,4 +1,3 @@
-
 <?php
 
 	// var_dump($_POST);
@@ -6,17 +5,17 @@
 ?>
 
 
-<form action="./tuto/initiation/tableMultiplication.php" method="POST">
-	
-	<input type="text" name="valeur">
+	<form action="./tuto/initiation/tableMultiplication.php" method="POST">
 
-	<input type="submit" value = 'Go !'>
+		<input type="text" name="valeur">
 
-</form>
+		<input type="submit" value='Go !'>
+
+	</form>
 
 
 
-<?php
+	<?php
 
 
 if (isset($_POST['valeur']) ) {

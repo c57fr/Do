@@ -5,10 +5,7 @@
 //$q = 'select title, slug from categories';
 //$q = 'select nom, email from clients';
 
-echo '<h1>oki 21 abc
-
-
-</h1>';
+//phpinfo();
 
 // Trouve le père de id = 12
 //$q='SELECT * FROM transports WHERE id = (SELECT pere FROM transports WHERE id = 12)';
@@ -45,5 +42,5 @@ $r = $cnx->query( $q )
 // Affichage Réel
 if ( $r ) {
 	affR( $r );
-	aff( $r );
+//	aff( $r );
 }

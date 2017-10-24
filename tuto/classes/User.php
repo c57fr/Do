@@ -71,4 +71,3 @@ $hadrien->rajeunir($hugo);
 echo '<h1 style ="color:green">Age Hugo = ' . $hugo->age . '</h1>';
 echo '<h1 style ="color:green">Age Hadrien = ' . $hadrien->age . '</h1>';
 */
-?>
