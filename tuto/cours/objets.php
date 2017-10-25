@@ -2,17 +2,19 @@
 
 <?php
 
-
-
 $do = new user('Do', 'Femme', 56, 'Sans');
 //$hugo->vieillir();
-
+$jade = new user('Jade', 'Fille', 12, 'Etudiante');
 $mimi = new user ('Mimi', 'Homme', 30, 'Cuisinier');
 $coco = new user ('Coco', 'Perroquet', 45, 'Sans');
 
+//$hugo = new user('Hugo', 'Homme', 21, 'maçon');
+//$flipper = new user('Flipper', 'Dauphin', 7, 'chasseur');
+//$jeny = new user('Jeny', 'Chienne', 7, 'chasseur');
 
-// affUser($do);
-// affUser($mimi);
+
+ include('C:\laragon\www\do\tuto\includes/fonctions.php'); affUser($do);
+ affUser($mimi);
 // affUser($coco);
 
 $mimi->prof='pompier';
@@ -22,4 +24,5 @@ $mimi->prof='pompier';
     echo '</pre>';
 
 
-echo 'Mimi, humain ? '.$mimi->estHumain;
+echo 'Mimi est-il humain ? ' . ( ($mimi->estHumain) ? 'Oui':'Non' );
+
