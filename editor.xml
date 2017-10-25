@@ -13,6 +13,18 @@
     <option name="concatenateStringsOnEnter" value="true" />
     <option name="qualificationType" value="On collisions" />
   </component>
+  <component name="TodoConfiguration">
+    <pattern pattern="\btodo\b.*" />
+    <pattern pattern="\bfixme\b.*" />
+    <pattern pattern="\btodoli\b.*" />
+    <pattern icon="important" pattern="\btoFixLi\b.*" />
+    <pattern icon="question" pattern="\btoUpLi\b.*" />
+    <filter name="Li">
+      <pattern index="2" />
+      <pattern index="3" />
+      <pattern index="4" />
+    </filter>
+  </component>
   <component name="XmlEditorOptions">
     <option name="showCssInlineColorPreview" value="true" />
   </component>
