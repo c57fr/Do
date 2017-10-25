@@ -35,6 +35,7 @@
     <option name="FILESTATUS_modifiedOutside" value="6897bb" />
     <option name="GUTTER_BACKGROUND" value="313335" />
     <option name="INDENT_GUIDE" value="373737" />
+    <option name="INFORMATION_HINT" value="3c3f41" />
     <option name="LINE_NUMBERS_COLOR" value="888888" />
     <option name="METHOD_SEPARATORS_COLOR" value="4d4d4d" />
     <option name="MODIFIED_LINES_COLOR" value="415f69" />
@@ -672,6 +673,13 @@
     <option name="INJECTED_LANGUAGE_FRAGMENT">
       <value>
         <option name="BACKGROUND" value="33463a" />
+      </value>
+    </option>
+    <option name="INLINE_PARAMETER_HINT">
+      <value>
+        <option name="FOREGROUND" value="d874ff" />
+        <option name="BACKGROUND" value="186fc5" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="INSTANCE_FIELD_ATTRIBUTES">
