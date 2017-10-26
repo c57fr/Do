@@ -41,9 +41,6 @@
   <action id="Macro.Format Save and RUN">
     <keyboard-shortcut first-keystroke="f10" />
   </action>
-  <action id="Macro.Format and Save">
-    <keyboard-shortcut first-keystroke="ctrl s" />
-  </action>
   <action id="MoveStatementDown" />
   <action id="NewElement">
     <keyboard-shortcut first-keystroke="alt insert" />
