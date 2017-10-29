@@ -1,6 +1,13 @@
 <?php
 namespace GC7;
 
+//
+//$subject = "abcdef";
+//$pattern = '/^def/';
+//preg_match($pattern, $subject, $matches, PREG_OFFSET_CAPTURE, 3);
+//print_r($matches);
+
+
 //$q = "
 //Procedure RecherchePeres (in i integer, inout reponse string)
 //begin
@@ -20,7 +27,24 @@ namespace GC7;
 
 
 // Requêtes et sous-requêtes
-include ('ssreq.php');
+//include ('subreq.php');
+
+// Jointures et sous-requêtes
+//include ('joints.php');
+
+// UNION de plusieurs requêtes
+//include ('union.php');
+
+// Clés étrangèes (Foreign Keys)
+//include ('foreign_key.php');
+
+// Fonctions natives MySQL
+//include ('functions.php');
+//include ('functionsAgregation.php');
+//include ('regroupement.php');
+//include ('date.php');
+//include ('calculsDate.php');
+include ('tests.php');
 
 
 
@@ -28,8 +52,9 @@ include ('ssreq.php');
 //$maReq = new Requete( (Array) $req );
 
 
+
 //////////////////////////////////////////////////////////////////////////////////////////
-include( '../class/Req.php' );
+//include( '../class/Req.php' );
 // Exemple requête simple
 //$req = [
 //  'sql' => 'req'
@@ -56,6 +81,3 @@ if ( isset( $r ) ) {
   affR( $r );
 //aff( $r );
 }
-
-
-//ToUpLi Macro formatAndSave ds PhpS

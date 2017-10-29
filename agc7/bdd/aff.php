@@ -8,7 +8,7 @@
 
 function aff( $v )
 {
-	echo '<pre>';
+	echo '<pre class="mt10">';
 	print_r( $v );
 	// var_dump($v);
 	echo '</pre>';
@@ -43,28 +43,10 @@ function affR( $r )
 
 	foreach ( $r as $row ) {
 		foreach ( $row as $p ) { // p comme propriété
-			echo '<td>' . $p . '</td>';
+			echo '<td style="background-color: white">' . $p . '</td>';
 		}
 		echo '</tr>';
 	}
 
 	echo '</table>';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
