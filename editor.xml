@@ -6,9 +6,10 @@
   </component>
   <component name="EditorSettings">
     <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
+    <option name="SHOW_QUICK_DOC_ON_MOUSE_OVER_ELEMENT" value="true" />
     <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
   </component>
-  <component name="LiveEditOptions" updatePolicy="AUTO" />
+  <component name="LiveEditOptions" restartIfHotSwapFailed="true" updatePolicy="AUTO" />
   <component name="SqlEditorOptions">
     <option name="concatenateStringsOnEnter" value="true" />
     <option name="qualificationType" value="On collisions" />
@@ -21,8 +22,8 @@
     <pattern icon="question" pattern="\btoUpLi\b.*" />
     <filter name="Li">
       <pattern index="2" />
-      <pattern index="3" />
       <pattern index="4" />
+      <pattern index="3" />
     </filter>
   </component>
   <component name="XmlEditorOptions">
