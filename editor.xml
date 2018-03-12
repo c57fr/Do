@@ -2,7 +2,7 @@
   <component name="DefaultFont">
     <option name="FONT_SIZE" value="14" />
     <option name="FONT_FAMILY" value="Source Code Pro Semibold" />
-    <option name="LINE_SPACING" value="1.1" />
+    <option name="LINE_SPACING" value="1.4" />
   </component>
   <component name="EditorSettings">
     <option name="USE_SOFT_WRAPS" value="MAIN_EDITOR" />
@@ -22,8 +22,8 @@
     <pattern icon="question" pattern="\btoUpLi\b.*" />
     <filter name="Li">
       <pattern index="2" />
-      <pattern index="4" />
       <pattern index="3" />
+      <pattern index="4" />
     </filter>
   </component>
   <component name="XmlEditorOptions">
