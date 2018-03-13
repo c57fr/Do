@@ -1,0 +1,118 @@
+{
+  "sujets": [
+    {
+      "fichier": "noChoix",
+      "sujet": "Sujets",
+      "description": "Attente de choix..."
+    },
+    {
+      "fichier": [
+        "personne",
+        "class/Personne"
+      ],
+      "sujet": "Simple classe",
+      "description": "<h3>Class Personne</h3><br><ol><li>Propriétés et méthodes.</li><li>Constantes de classe</li><ol>"
+    },
+    {
+      "fichier": [
+        "vehicule",
+        "class/Vehicule",
+        "class/Voiture"
+      ],
+      "sujet": "Classe Mère & Fille (Héritage)",
+      "description": "<h3>Classe Voiture extends Vehicule</h3><p>Mère & Fille (Héritage)</p><p>Avec constructeur</p><br><p>Une Voiture est un Vehicule</p>"
+    },
+    {
+      "fichier": [
+        "camion",
+        "class/Vehicule",
+        "class/Camion"
+      ],
+      "sujet": "Classe Mère & Fille (Surcharges)",
+      "description": "<h3>Classe Camion extends Vehicule</h3><p>Opérateur de résolution de portée ( :: )</p><p>Surcharge de propriétés & de méthodes</p><p>(Ici, du constructeur)</p><p><i>À noter la <b>redéfinition possible d'une constante</b> d'une classe mère dans la classe fille (Cf. const NRJ)</i>...</p><br><p>Un Camion est un Vehicule</p>"
+    },
+    {
+      "fichier": [
+        "vehicule",
+        "class/Vehicule"
+      ],
+      "sujet": "Propriétés et méthodes STATIQUES",
+      "description": "<h3>Classe Vehicule</h3><p>Propre à la classe et non à un objet créé</p><p>Usage de Classe::propriete & Classe::methode();</p><p>Ex.: Propriété Vehicule::$parc<br>et méthode Vehicule::getParc()</p>"
+    },
+    {
+      "fichier": [
+        "humains",
+        "class/EtreHumain",
+        "class/HommeFemme"
+      ],
+      "sujet": "Classe ABSTRAITE & classe FINALE",
+      "description": "<h3>Classes abstraites et finales</h3><p><code>abstract class Humain(...){}</code></p><p><code>final class Homme(){...}</code><br><code>final class Femme(){...}</code></br></p><p>N;B.: Une méthode peut aussi être déclarée finale</p>"
+    },
+    {
+      "fichier": [
+        "contact",
+        "interfaces/Renseignement",
+        "class/Contact"
+      ],
+      "sujet": "Interface",
+      "description": "<h3>Comme une classe abstraite, mais sans propriétés</h3><p><em>Ex. Interface Renseignement</em></p><p>À noter: Peuvent contenir contantes, mais qui ne peuvent pas être surchargées dans classes qui l'implémente</p><br><p>Utilisation démo de la méthode magique <code>__destruct()</code></p>"
+    },
+    {
+      "fichier": "class/OneTrait",
+      "sujet": "Trait (Trait)",
+      "description": "<h3>Trait SayWorld</h3><p><code>use SayWorld;</code></p>"
+    },
+    {
+      "fichier": [
+        "kid",
+        "class/Kid"
+      ],
+      "sujet": "Méthodes magiques __GET(), __SET(), __ISSET(), __UNSET(), __TOSTRING() et INVOKE()",
+      "description": "<h3>Classe Kid</h3><p>Permet le contrôle pour l'accès aux propriétés non public</p><p>Il existe <code>__isset()</code> et <code>__unset()</code> pour gérer respectivement des isset() et unset() sur des propriétés qui n'existent pas</p><p><code>__toString</code> permet de retourner une chaîne qd on echo un objet de la classe (<code>__invoke()</code> similaire si objet appelé comme une fonction)</p>"
+    },
+    {
+      "fichier": "manchot",
+      "sujet": "Méthodes magiques __CALL()",
+      "description": "<h3>Classe Manchot</h3></p><p>Méthode magique __CALL()</p><p>Appel d'une méthode n'existant pas</p><p>Ex.: Application pour créer requête SQL</p><p>Il existe <code>__callStatic()</code>"
+    },
+    {
+      "fichier": "point",
+      "sujet": "Méthodes magiques __CLONE()",
+      "description": "<h3>Classe Point</h3><p>Clone d'un point( <code>clone ($oPt);</code> )</p><p>Méthode magique __CLONE()</p><p>Singleton</p>"
+    },
+    {
+      "fichier": "dormeur",
+      "sujet": "Méthodes magiques __SLEEP() & __WAKEUP()",
+      "description": "<h3>Classe Dormeur</h3><ol><li><code>__sleep()</code> Appelée lors d’un <code>serialize()</code></li> <li><code>__wakeup()</code> Appelée lors d’un <code>unserialize()</code></li></ol>"
+    },
+    {
+      "fichier": "pion",
+      "sujet": "Chaînage de méthodes",
+      "description": "<h3>Plusieurs méthodes de suite</h3><p>Impératif: <code>return $this;</code en fin de méthode</p>"
+    },
+    {
+      "fichier": "divers",
+      "sujet": "Closures, fonctions et classes anonymes",
+      "description": "<h3>Fonctions et classes sans nom</h3><p>Exemple avec <code>array_map()</code></p>"
+    },
+    {
+      "fichier": "iterator",
+      "sujet": "Iterator (Trait)",
+      "description": "<h3>Trait Iterator</h3><p><code>class MaClasse implements Iterator{...}</code></p><p><code>rewind()</code><br><code>key()</code></br><code>current()</code><br><code>next()</code></br><code>valid()</code></p><p>2 exemples</p>"
+    },
+    {
+      "fichier": [
+        "autochargement",
+        "class/Voiture",
+        "class/Kid"
+      ],
+      "sujet": "Autochargement des classes utilisées",
+      "description": "<h3><code>spl_autoload_register()</code></h3><p>Ex. avec Kid</p>"
+    },
+    {
+      "fichier": "resolutionStatique",
+      "sujet": "Résolution statique la volée",
+      "description": "<h3></h3><h4>Référence à la classe Mère</h4><p>Classe mère: <code>self::methode()</code><br>Hors des classes: <code>Classe::methode()</code></p><h4>Référence à la classe Fille</h4><p>Classe mère: <code>static::methode()</code><br>Hors des classes: <code>Classe::methode()</code></p>"
+    }
+  ]
+}

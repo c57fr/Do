@@ -26,31 +26,48 @@ namespace GC7;
 //";
 
 
-// Requêtes et sous-requêtes
-//include ('subreq.php');
+// Bases
+//include( 'bases/subReq.php' );
+//include( 'bases/joints.php' );
+//include( 'bases/union.php' );
+//include( 'bases/foreign_key.php' );
 
-// Jointures et sous-requêtes
-//include ('joints.php');
-
-// UNION de plusieurs requêtes
-//include ('union.php');
-
-// Clés étrangèes (Foreign Keys)
-//include ('foreign_key.php');
 
 // Fonctions natives MySQL
-//include ('functions.php');
-//include ('functionsAgregation.php');
-//include ('regroupement.php');
-//include ('date.php');
-//include ('calculsDate.php');
-include ('tests.php');
+
+// Avec ocr1.sql
+//include( 'bases/functions.php' );
+//include( 'bases/functionsAgregation.php' );
+//include( 'bases/regroupement.php' );
+//include( 'bases/date.php' );
+//include( 'bases/calculsDate.php' );
 
 
+// Sécurisation
+
+// Avec ocr1.sql
+include( 'securisation/transactions.php' );
+//include( 'securisation/verrous.php' );
+//include( 'securisation/requetesPreparees.php' );
+//include( 'securisation/procedures.php' );
+//include( 'securisation/conditions.php' );
+//include( 'securisation/fonctionsUtilisateur.php' );
+//include( 'securisation/boucles.php' );
+//include( 'securisation/erreurs_curseurs.php' );
+//include( 'securisation/triggers.php' );
 
 
-//$maReq = new Requete( (Array) $req );
+//include( 'securisation/vues.php' );
+//include( 'securisation/tablesTemporaires.php' );
+//include( 'securisation/vuesMaterialisées.php' );
 
+
+//include( 'securisation/exo6.php' );
+//include( 'admin/infos.php' );
+//include( 'admin/config.php' );
+//
+
+include( 'xu/xu.php' );
 
 
 //////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,152 @@
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  //min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #985f00;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .hv-container {
+    flex-grow: 1;
+    overflow: auto;
+    justify-content: center;
+  }
+}
+
+.basic-style {
+  background-color: #efe6e2;
+  & > h1 {
+    color: #de5454 -50;
+
+  }
+}
+
+.titre2eme {
+  margin-top: 50px;
+  color: yellow;
+}
+
+p.cardM {
+  margin: 0;
+  background-color: white;
+  /*color: #de5454;*/
+  border-radius: 7px;
+  padding: 30px;
+  min-width: 100px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(#cc8367, 0.77);
+  b {
+    font-weight: normal;
+    font-size: .8em;
+  }
+}
+
+p.simple-card {
+  margin: 0;
+  background-color: #fff;
+  color: #de5454;
+  border-radius: 7px;
+  padding: 30px;
+  min-width: 100px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(#cc8367, 0.77);
+  b {
+    font-weight: normal;
+    font-size: .8em;
+  }
+}
+
+.hv-item-parent {
+  p {
+    color: #de5454;
+
+  }
+}
+
+.management-hierarchy {
+  background-color: #303840;
+  & > h1 {
+    color: #fff;
+  }
+  .person {
+    text-align: center;
+    & > img {
+      height: 110px;
+      border: 5px solid #fff;
+      border-radius: 60%;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    & > p.name {
+      background-color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      color: blue;
+      margin: 0;
+      position: relative;
+      b {
+        color: rgba(red, 0.7);
+        font-weight: bold;
+
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 8px;
+        background-color: #fff;
+        left: 50%;
+        top: 0;
+        transform: translateY(-100%);
+      }
+    }
+  }
+  .card_img {
+    width: 120px;
+  }
+}
+
+article.listeMembres {
+  width: 95%;
+  margin: 5px auto;
+  line-height: .9;
+  font-size: 15px;
+  column-count: 2;
+  hyphens: auto;
+  color: #00f;
+}
+
+.vdColl {
+  color: #444;
+  span {
+    text-decoration: underline;
+  }
+}
+
+.grand{
+  display: block;
+  line-height: .7;
+  font-size: 4em;
+}

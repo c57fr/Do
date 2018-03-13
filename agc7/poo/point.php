@@ -1,4 +1,4 @@
-<?php
+<?php namespace Poo;
 
 class Point {
 	/**
@@ -24,27 +24,36 @@ class Point {
 	 *
 	 * @return void
 	 */
-	public function setCoords( $x, $y ) {
+	public function setCoords( $x, $y )
+	{
 		$this->_x = (int) $x;
 		$this->_y = (int) $y;
 	}
 }
 
 $p1 = new Point();
-$p1->setCoords( 2, 3 );
+$p1->setCoords( 1, 2 );
 
-echo '<pre>';
+//echo '<pre>'; // Inutile avec xDebug
 var_dump( $p1 );
-echo '</pre>';
+//echo '</pre>';
 
 
-$p2 = clone $p1;
-$p2->setCoords( 1, 2 );
-
-echo '<pre>';
+$p2 = $p1;
+$p2->setCoords( 2, 3 );
 var_dump( $p1 );
-echo '</pre><hr>';
+echo 'p2 modifié => p1 aussi: p1 et p2 sont une seule et même instance<br>';
 
+$p3 = clone $p1;
+$p3->setCoords( 3, 4 );
+var_dump( $p1, $p3 );
+echo '=> En utilisant <code>clone()</code>, p1 et p3 sont réellement 2 objects identiques au départ, mais distincts<br>';
+
+
+echo '<hr>';
+//////////////////////////////////////// Singleton
+
+use Exception;
 
 class Sheep {
 	/**
@@ -59,7 +68,8 @@ class Sheep {
 	 *
 	 * @param String $name nom du mouton
 	 */
-	public function __construct( $name ) {
+	public function __construct( $name )
+	{
 		$this->_name = (string) $name;
 	}
 
@@ -68,17 +78,18 @@ class Sheep {
 	 *
 	 * @return void
 	 */
-	public function __clone() {
+	public function __clone()
+	{
 		$this->_name = 'Copie de ' . $this->_name;
 	}
 }
 
 $oSheep    = new Sheep( 'Dolly' );
 $oNewSheep = clone $oSheep;
-echo '<pre>';
-var_dump( $oSheep );
-var_dump( $oNewSheep );
-echo '</pre><hr>';
+
+var_dump( $oSheep, $oNewSheep );
+
+echo '<hr>';
 
 class Singleton {
 	/**
@@ -93,7 +104,8 @@ class Singleton {
 	 *
 	 * @access protected
 	 */
-	protected function __construct() {
+	protected function __construct()
+	{
 	}
 
 	/**
@@ -101,7 +113,8 @@ class Singleton {
 	 *
 	 * @return Singleton
 	 */
-	public static function getInstance() {
+	public static function getInstance()
+	{
 		if ( null === self::$_instance ) {
 			self::$_instance = new Singleton();
 		}
@@ -114,18 +127,16 @@ class Singleton {
 	 *
 	 * @return void
 	 */
-	public function __clone() {
+	public function __clone()
+	{
 		throw new Exception( 'Are you Trying to clone me ? I\'m a Singleton dude !' );
 	}
 }
 
 try {
 	$oSingleton = Singleton::getInstance();
-	echo 'Tentative de clônage d\'un signgleton :<br>';
+	echo 'Tentative de <b>clônage</b> d\'un <b>singleton</b> :<br>';
 	clone $oSingleton;
+} catch ( Exception $e ) {
+	echo '=> <b>Oops</b>, exception : ', $e->getMessage();
 }
-catch ( Exception $e ) {
-	echo 'Oops, exception : ', $e->getMessage();
-}
-
-echo '<hr>';

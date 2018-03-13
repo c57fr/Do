@@ -1,0 +1,39 @@
+{
+  "sujets": [
+    {
+      "fichier": "noChoix",
+      "sujet": "Sujets",
+      "description": "Attente de choix..."
+    },
+    {
+      "fichier": [
+        "reference",
+        "class/esAB"
+      ],
+      "sujet": "Variables/Propriétés par références",
+      "description": "<h3>&$var</h3>"
+    },
+    {
+      "fichier": [
+        "filtres",
+        "include/listeFiltres"
+      ],
+      "sujet": "Filtres en PHP",
+      "description": "<h3>Filtres</h3>"
+    },
+    {
+      "fichier": "erreurs",
+      "sujet": "Gérer les erreurs en PHP",
+      "description": "<h3>Gestion des erreurs</h3>"
+    },
+    {
+      "fichier": "exceptions",
+      "sujet": "Gérer les exceptions en PHP",
+      "description": "<h3>Lancer des exceptions</h3><p><code>throw new Exception('...') ... try{...} catch{...} finally{...}</code></p>"
+    }, {
+      "fichier": "divers",
+      "sujet": "Divers / tests",
+      "description": "<h3>Tests rapides divers</h3>"
+    }
+  ]
+}

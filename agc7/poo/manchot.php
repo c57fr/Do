@@ -1,6 +1,7 @@
 <?php
 
 class Manchot {
+
 	/**
 	 * Methode magique __call()
 	 *
@@ -10,16 +11,29 @@ class Manchot {
 	 * @return void
 	 * @access private
 	 */
-	public function __call( $method, $arguments ) {
-		echo 'Vous avez appelé la méthode ', $method, ' avec les arguments : ', implode( ', ', $arguments );
+	public function __call( $method, $argus )
+	{
+		// Contexte objet
+		echo '<i>Aspirine, peut-être... ?</i><br><br>En effet, vous avez appelé la méthode <b>', $method, '</b> avec les arguments : " ', implode( ', ', $argus ) . ' " pour $georges qui est un ...<b>' . get_class( $this ) . '</b> !!!';
+	}
+
+	public static function __callStatic( $nomMethode, $arguments )
+	{
+		// Contexte statique
+		echo 'Dans la classe <b>' . __CLASS__ . '</b>, la méthode "<b>' . $nomMethode . '</b>" n\'existe pas / n\'est pas accessible
+depuis un contexte statique. <br>Arguments
+passés: ' . implode( ', ', $arguments ) . '<br>';
+
 	}
 }
 
 $george = new Manchot();
 $george->voler( 'Afrique', 123, 'abc' );
+echo '<hr>';
 
-echo '<hr><hr>';
+Manchot::lireEtTournerLesPages( 'Journal de Mickey', 'Tintin' );
 
+echo '<hr>';
 
 class SearchEngine {
 	/**
@@ -31,7 +45,8 @@ class SearchEngine {
 	 * @return array $return Tableau des résultats
 	 * @see SPDO
 	 */
-	public function search( $conditions = [ ] ) {
+	public function search( $conditions = [ ] )
+	{
 		$query = 'SELECT id FROM table';
 
 		if ( count( $conditions ) > 0 ) {
@@ -57,11 +72,8 @@ class SearchEngine {
 	 * @return array|null $return Tableau des résultats ou NULL
 	 * @see SearchEngine::search()
 	 */
-	public function __call( $method, $args ) {
-
-		echo '<pre>';
-		//echo var_dump( debug_backtrace() );
-		echo '</pre>';
+	public function __call( $method, $args )
+	{
 
 		if ( preg_match( '#^searchBy#i', $method ) ) {
 			$searchConditions = str_replace( 'searchBy', '', $method );
@@ -83,5 +95,4 @@ class SearchEngine {
 }
 
 $mySearchEngine = new SearchEngine();
-echo '$mySearchEngine->searchByNameAndDate( \'Lionel\', \'23/03/1965\' ) :<pre>' . $mySearchEngine->searchByNameAndDate( 'Lionel',
-                                                                                                                         '23/03/1965' ) . '</pre>';
+echo '$mySearchEngine->searchByNameAndDate( \'Lionel\', \'23/03/1965\' ) :<br><br>' . $mySearchEngine->searchByNameAndDate( 'Lionel', '23 / 03 / 1965' );
